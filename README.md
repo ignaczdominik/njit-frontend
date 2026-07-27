@@ -1,17 +1,18 @@
-# Vue alap | 26
+# Vue alap | 2627 TypeScript
 
 > Az alap tartalmaz minden olyan csomagot amely az órai feladatok elkészítéséhez szükséges.
 
 ## Tartalom
 
-- [Vue alap | 26](#vue-alap-26)
+- [Vue alap | 2627 TypeScript](#vue-alap-2627-typescript)
   - [Tartalom](#tartalom)
   - [Node és a Vite kezelése](#node-és-a-vite-kezelése)
     - [Telepítés](#telepítés)
     - [Fejlesztői szerver indítás](#fejlesztői-szerver-indítás)
     - [Közzétenni kívánt verzió előállítása](#közzétenni-kívánt-verzió-előállítása)
+    - [Unit tesztek futtatása](#unit-tesztek-futtatása)
   - [Mappaszerkezet](#mappaszerkezet)
-  - [Dokumnetációk](#dokumnetációk)
+  - [Dokumentációk](#dokumentációk)
 
 ## Node és a Vite kezelése
 
@@ -20,7 +21,7 @@
 Első indítás alkalmával:
 
 ```bash
-npm i
+pnpm i
 ```
 
 Egyéb csomagok telepítése:
@@ -57,24 +58,39 @@ Ahhoz, hogy ellenőrizni tudd, hogy helyesen működik az alkalmazásod, a köve
 pnpm preview
 ```
 
+### Unit tesztek futtatása
+
+A projekt Vitest-et használ a unit tesztekhez, a teszteket a `tests` mappában találod.
+
+```bash
+pnpm test
+```
+
 ## Mappaszerkezet
 
 - `components`: Újrahasnosítható komponensek
-  - `layout`: Az olal elrendezéséhez tartozó komponensek (Navbar, Footer)
+  - `layout`: Az oldal elrendezéséhez tartozó komponensek (Navbar, Footer)
+  - `ui`: Shadcn/vue UI komponensek
+- `layouts`: Az oldalakhoz tartozó layout komponensek
+- `lib`: Segédfüggvények (pl. Shadcn/vue `cn` util)
+- `locales`: Vue I18n fordítási fájlok
 - `pages`: Az oldalakat tartalmazó komponensek
 - `router`: Routerhez tartozó scriptek
   - `guards`: Router Guardokat tartalmazó scriptek
 - `stores`: Pinia tárolók
-- `test`: Unit tesztek
-- `utils`: Kiegészítű scriptek, pl.: Axios
+- `utils`: Kiegészítő scriptek, pl.: Axios
+
+A projekt gyökerében a `tests` mappa tartalmazza a unit teszteket.
 
 ## Dokumentációk
 
 - Vite.js: [https://vite.dev](https://vite.dev)
+- TailwindCSS: [https://tailwindcss.com](https://tailwindcss.com)
 - Vue.js: [https://vuejs.org](https://vuejs.org)
 - Vue Router: [https://router.vuejs.org](https://router.vuejs.org)
-- Unplugin Vue Router: [https://uvr.esm.is](https://uvr.esm.is)
 - Pinia: [https://pinia.vuejs.org](https://pinia.vuejs.org)
-- FormKit: [https://formkit.com/](https://formkit.com/)
-- TailwindCSS: [https://tailwindcss.com](https://tailwindcss.com)
-- Shadcn/vue: [https://www.shadcn-vue.com/](https://www.shadcn-vue.com/)# njit-frontend
+- Vee-Validate: [https://vee-validate.logaretm.com](https://vee-validate.logaretm.com)
+- Zod: [https://zod.dev](https://zod.dev)
+- Vue I18n: [https://vue-i18n.intlify.dev](https://vue-i18n.intlify.dev)
+- Vitest: [https://vitest.dev](https://vitest.dev)
+- Shadcn/vue: [https://www.shadcn-vue.com/](https://www.shadcn-vue.com/)
