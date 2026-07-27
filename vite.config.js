@@ -3,7 +3,7 @@ import { defineConfig, loadEnv } from 'vite';
 
 import Vue from '@vitejs/plugin-vue'
 import VueDevtools from 'vite-plugin-vue-devtools'
-import VueRouter from 'unplugin-vue-router/vite'
+import VueRouter from 'vue-router/vite'
 import TailwindCSS from '@tailwindcss/vite'
 
 export default ({ mode }) => {

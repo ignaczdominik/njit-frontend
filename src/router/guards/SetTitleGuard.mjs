@@ -1,4 +1,4 @@
-export function setTitle(to, from, next) {
+export function setTitle(to, from) {
   document.title = `${to.meta.title} | ${import.meta.env.VITE_APP_NAME}`
-  next()
+  return true
 }
